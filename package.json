@@ -18,6 +18,7 @@
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
     "stripe": "^18.0.0",
+    "tailwind-scrollbar-hide": "^2.0.0",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
