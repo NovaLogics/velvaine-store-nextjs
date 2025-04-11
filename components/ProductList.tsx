@@ -1,4 +1,4 @@
-import { getProducts } from "@/lib/actions";
+import { getProducts } from "@/lib/actions/actions";
 import React from "react";
 import ProductCard from "./ProductCard";
 
