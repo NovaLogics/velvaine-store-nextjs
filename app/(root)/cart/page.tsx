@@ -15,8 +15,9 @@ const Cart = () => {
   const totalRounded = parseFloat(total.toFixed(2));
 
   return (
-    <div className="bg-white text-black flex gap-20 py-16 px-10">
-      <div className="w-2/3">
+    <div className="bg-white text-black flex gap-20 py-16 px-10 max-lg:flex-col">
+
+      <div className="w-2/3 max-lg:w-full">
         <p className="text-heading3-bold">Shopping Cart</p>
         <hr className="my-6" />
 
@@ -25,7 +26,7 @@ const Cart = () => {
         ) : (
           <div>
             {cart.cartItems.map((cartItem) => (
-              <div className="w-full flex hover:bg-grey-2 px-6 py-5 items-center justify-between">
+              <div className="w-full flex max-sm:flex-col max-sm:gap-3 hover:bg-grey-2 px-6 py-5 items-center max-sm:items-start justify-between">
                 <div className="flex items-center">
                   <Image
                     src={cartItem.item.media[0]}
@@ -72,7 +73,7 @@ const Cart = () => {
         )}
       </div>
 
-      <div className="w-1/3 flex flex-col gap-8 bg-grey-2 rounded-lg px-4 py-5">
+      <div className="w-1/3 max-lg:w-full flex flex-col gap-8 bg-grey-2 rounded-lg px-4 py-5">
         <p className="text-heading4-bold pb-4">
           Summary{" "}
           <span>{`(${cart.cartItems.length} ${
