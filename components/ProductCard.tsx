@@ -17,7 +17,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     >
       <Image
         className="h-[250px] rounded-lg object-cover"
-        src={product.media[0]}
+        src={product?.media[0]}
         alt="product"
         width={250}
         height={300}
