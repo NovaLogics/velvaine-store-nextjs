@@ -18,3 +18,10 @@ export const getProductDetails = async (productId: string) => {
 
   return await products.json();
 };
+
+export const getSearchProducts = async (query: string) => {
+  const searchProducts = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/search/${query}`
+  );
+  return await searchProducts.json();
+};
