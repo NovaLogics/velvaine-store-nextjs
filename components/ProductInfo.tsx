@@ -21,7 +21,8 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ productInfo }) => {
 
   return (
     <div className="max-w-[400px] flex flex-col gap-4">
-      <div className="flex justify-between items-center">
+
+      <div className="flex justify-between items-center w-full gap-3">
         <p className="text-heading3-bold font-semibold">{productInfo.title}</p>
         <LikeHeart product={productInfo} />
       </div>
