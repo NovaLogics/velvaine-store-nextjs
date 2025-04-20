@@ -6,9 +6,10 @@ import LikeHeart from "./LikeHeart";
 
 interface ProductCardProps {
   product: ProductType;
+  updatedSignedInUser?: (updatedUser: UserType) => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, updatedSignedInUser }) => {
 
   return (
     <Link
@@ -30,7 +31,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
       <div className="flex justify-between items-center">
         <p className="text-base-medium font-semibold">${product.price}</p>
-        <LikeHeart product={product} />
+        <LikeHeart product={product} updatedSignedInUser={updatedSignedInUser}/>
       </div>
     </Link>
   );
